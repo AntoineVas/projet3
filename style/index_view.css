@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    background:linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(../img/index-bg.jpg) no-repeat;
+    background-size: 25px 25px,cover;
+    margin-top: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+header {
+  font-family: 'Bangers', cursive;
+  text-align: center;
+  font-size: 45px;
+  letter-spacing: 15px;
+  color: #e74c3c;
+}
+
+.nav {
+  text-align: center;
+  margin-top: 25px;
+  margin-top: 45px;
+  font-family: 'Bangers', cursive;
+  font-size: 45px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  padding: 0px 35px 0px 35px;
+}
+
+.films {
+  color: white;
+  text-align: center;
+  margin-top: 45px;
+  font-family: 'Bangers', cursive;
+}
+
+.films h1 {
+  font-size: 45px;
+  letter-spacing: 15px;
+}
+
+.films .number {
+  flex-direction: row;
+}
