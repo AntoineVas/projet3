@@ -48,3 +48,7 @@ header {
 .films .number {
   flex-direction: row;
 }
+
+.films .number img {
+  padding: 25px;
+}
