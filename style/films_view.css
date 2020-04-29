@@ -52,24 +52,20 @@ a:hover{
     font-size: 75px;
 }
 
-.films .row .col-sm-3 .card {
-  background-color: transparent;
-  border: none;
-}
-
-.films .row .col-sm-3 .card p,h3,h4{
+.films .nos-films {
+  color: black;
   text-align: center;
-}
-
-.films .row .col-sm-3 .card h3,h4 {
-  color: white;
+  margin-top: 35px;
   font-family: 'Bangers', cursive;
 }
 
-.films .row .col-sm-3 .card h3 {
-  color: #f1c40f;
+.films .card-body {
+  overflow: scroll;
+  font-size: 25px;
+  height: 300px;
 }
 
-.films .row .col-sm-3 .card img {
-  border-radius: 15px;
+.films .card-header {
+  color: #e74c3c;
+  font-size: 30px;
 }
