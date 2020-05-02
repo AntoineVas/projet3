@@ -22,8 +22,9 @@
         <div class="navigation">
           <a href="index.php">Accueil</a>
           <a class="active" href="#">Films</a>
-          <a href="#">Réservation</a>
-          <a href="#">Connexion</a>
+          <a href="reservation.php">Réservation</a>
+          <a href="connexion.php">Connexion</a>
+          <a href="inscription.php">Inscription</a>
         </div>
       </div>
     </header>
@@ -60,10 +61,46 @@
                   <div class="nb_horreur">
                     <?php
                       $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
-                      foreach($bdd->query('SELECT COUNT(*) FROM films WHERE categorie = "Horreur"') as $row) {
-                      echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : Horreur" ;
+                      foreach($bdd->query('SELECT COUNT(*) FROM films WHERE categorie = "Comédie"') as $row) {
+                      echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : Comédie </br>" ;
                     }
                      ?>
+                     <?php
+                       $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
+                       foreach($bdd->query('SELECT COUNT(*) FROM films WHERE categorie = "Drame"') as $row) {
+                       echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : Drame </br>" ;
+                     }
+                      ?>
+                      <?php
+                        $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
+                        foreach($bdd->query('SELECT COUNT(*) FROM films WHERE categorie = "Western"') as $row) {
+                        echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : Western </br>" ;
+                      }
+                       ?>
+                       <?php
+                         $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
+                         foreach($bdd->query('SELECT COUNT(*) FROM films WHERE categorie = "Policier"') as $row) {
+                         echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : Policier </br>" ;
+                       }
+                        ?>
+                        <?php
+                          $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
+                          foreach($bdd->query('SELECT COUNT(*) FROM films WHERE categorie = "Fantastique"') as $row) {
+                          echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : Fantastique </br>" ;
+                        }
+                         ?>
+                         <?php
+                           $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
+                           foreach($bdd->query('SELECT COUNT(*) FROM films WHERE categorie = "Horreur"') as $row) {
+                           echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : Horreur </br>" ;
+                         }
+                          ?>
+                          <?php
+                            $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
+                            foreach($bdd->query('SELECT COUNT(*) FROM films WHERE categorie = "Catastrophe"') as $row) {
+                            echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : Catastrophe" ;
+                          }
+                           ?>
                   </div>
                 </p>
               </div>

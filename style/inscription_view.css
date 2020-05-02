@@ -43,34 +43,27 @@ a:hover{
   transition: 0.8s;
 }
 
-.films h1 {
-    text-align: center;
-    color: white;
-    margin-top: 25px;
-    font-family: 'Bangers', cursive;
-    letter-spacing: 12px;
-    font-size: 75px;
-}
-
-.films .nos-films {
-  color: white;
+.formulaire {
   text-align: center;
-  margin-top: 35px;
-  font-family: 'Bangers', cursive;
+  margin-top: 50px;
 }
 
-.films .card {
-  background: transparent;
+.formulaire input {
+  text-align: center;
+  padding: 15px;
+  width: 25%;
+  border-radius: 15px;
   border: none;
 }
 
-.films .card-body {
-  overflow-y: auto;
+.formulaire a {
+  color: white;
+  font-family: 'Bangers', cursive;
   font-size: 25px;
-  height: 350px;
 }
 
-.films .card-header {
+.formulaire a:hover {
   color: #e74c3c;
-  font-size: 30px;
+  transition: 0.8s;
+  font-size: 20px;
 }

@@ -43,34 +43,37 @@ a:hover{
   transition: 0.8s;
 }
 
-.films h1 {
-    text-align: center;
-    color: white;
-    margin-top: 25px;
-    font-family: 'Bangers', cursive;
-    letter-spacing: 12px;
-    font-size: 75px;
+.nolog .icon {
+  margin-top: 50px;
+  text-align: center;
 }
 
-.films .nos-films {
+.nolog .icon i {
   color: white;
+}
+
+.nolog .explain {
   text-align: center;
-  margin-top: 35px;
+  color: white;
   font-family: 'Bangers', cursive;
 }
 
-.films .card {
-  background: transparent;
-  border: none;
+.nolog .button {
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Bangers', cursive;
+  color: white;
 }
 
-.films .card-body {
-  overflow-y: auto;
-  font-size: 25px;
-  height: 350px;
+.nolog .button a {
+  padding: 15px;
+  color: white;
+  border-radius: 15px;
+  font-size: 45px;
+  margin-left: 35px;
 }
 
-.films .card-header {
+.nolog .button a:hover {
   color: #e74c3c;
-  font-size: 30px;
+  transition: 0.8s;
 }

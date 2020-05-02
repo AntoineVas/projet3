@@ -22,8 +22,9 @@
         <div class="navigation">
           <a class="active" href="#">Accueil</a>
           <a href="films.php">Films</a>
-          <a href="#">Réservation</a>
-          <a href="#">Connexion</a>
+          <a href="reservation.php">Réservation</a>
+          <a href="connexion.php">Connexion</a>
+          <a href="inscription.php">Inscription</a>
         </div>
       </div>
     </header>
