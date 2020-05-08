@@ -4,8 +4,8 @@ session_start();
 Class Manager {
 
     public function connexion($connex){
-        $bdd= new PDO('mysql:host=localhost;dbname=project;charset=utf8','root','');
-        $reponse=$bdd->prepare('SELECT * FROM utilisateur WHERE mail=:mail AND mdp=:mdp');
+        $bdd= new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
+        $reponse=$bdd->prepare('SELECT * FROM user WHERE mail=:mail AND mdp=:mdp');
         $reponse->execute(array(
         'mail'=>$connex->getMail(),
         'mdp'=>$connex->getMdp()));
@@ -15,7 +15,6 @@ Class Manager {
             $_SESSION['id'] = $donne['id'];
             $_SESSION['nom'] = $donne['nom'];
             $_SESSION['prenom'] = $donne['prenom'];
-            $_SESSION['age'] = $donne['age'];
             $_SESSION['mail'] = $donne['mail'];
             $_SESSION['mdp'] = $donne['mdp'];
             $_SESSION['role'] = $donne['role'];
@@ -23,19 +22,20 @@ Class Manager {
                 header('');
             }
             else{
-                header('');
+                header('location: ../view/login/index.php');
             }
-            
+
         }
         else{
-            header('');
+            header('location: ../error/connexion_user.php');
         }
     }
 
     public function inscription($ins){
-        $bdd = new PDO('mysql:host=localhost;dbname=project;charset=utf8','root','');
-        $req = $bdd->prepare('INSERT INTO utilisateur(nom, prenom, age, mail, mdp) VALUES(:nom, :prenom, :age, :mail, :mdp)');
-        $req->execute(array('nom'=>$ins->getNom(), 'prenom'=>$ins->getPrenom(), 'age'=>$ins->getAge(), 'mail'=>$ins->getMail(), 'mdp'=>$ins->getMdp()));
+        $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
+        $req = $bdd->prepare('INSERT INTO user(nom, prenom, mail, mdp) VALUES(:nom, :prenom, :mail, :mdp)');
+        $req->execute(array('nom'=>$ins->getNom(), 'prenom'=>$ins->getPrenom(), 'mail'=>$ins->getMail(), 'mdp'=>$ins->getMdp()));
+        header('location: ../view/login/index.php');
     }
 
 

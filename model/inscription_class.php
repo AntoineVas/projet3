@@ -4,21 +4,18 @@ Class Inscription{
 
     private $nom;
     private $prenom;
-    private $age;
     private $mail;
     private $mdp;
 
-    public function __construct($nom, $prenom, $age, $mail, $mdp, $mdp2){
+    public function __construct($nom, $prenom, $mail, $mdp){
         $this->setNom($nom);
         $this->setPrenom($prenom);
-        $this->setAge($age);
         $this->setMail($mail);
-        $this->setMdp($mdp, $mdp2);
+        $this->setMdp($mdp);
     }
 
     public function getNom(){ return $this->nom; }
     public function getPrenom(){ return $this->prenom; }
-    public function getAge(){ return $this->age; }
     public function getMail(){ return $this->mail; }
     public function getMdp(){ return $this->mdp; }
 
@@ -40,32 +37,20 @@ Class Inscription{
         }
     }
 
-    public function setAge($age){
-        if($age > 0 && $age < 120){
-            $this->age = $age;
-        }else{
-            echo 'Merci de saisir votre age !';
-        }
-    }
-
     public function setMail($mail){
-        $bdd= new PDO('mysql:host=localhost;dbname=project;charset=utf8','root','');
-        $reqmail = $bdd->prepare("SELECT * FROM utilisateur WHERE mail = ?");
+        $bdd= new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
+        $reqmail = $bdd->prepare("SELECT * FROM user WHERE mail = ?");
         $reqmail->execute(array($mail));
         $mailexist = $reqmail->rowCount();
         if($mailexist == 0){
             $this->mail = $mail;
         }else{
-            echo 'Mail déjà utiliser !';
+            header('location: ../error/mdp_user.php');
         }
     }
 
-    public function setMdp($mdp, $mdp2){
-        if($mdp == $mdp2){
-            $this->mdp = sha1($mdp);
-        }else{
-            echo 'Les Mdp ne correspondent pas !';
-        }
+    public function setMdp($mdp){
+        $this->mdp = sha1($mdp);
     }
 
 }

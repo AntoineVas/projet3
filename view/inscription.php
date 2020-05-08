@@ -26,12 +26,12 @@
     </header>
 
     <div class="formulaire">
-      <form class="" action="" method="post">
+      <form class="" action="../traitement/inscriptionTr.php" method="post">
         <input type="text" name="nom" value="" placeholder="Nom"><br><br>
         <input type="text" name="prenom" value="" placeholder="Prénom"><br><br>
         <input type="email" name="mail" value="" placeholder="Mail"><br><br>
         <input type="password" name="mdp" value="" placeholder="Mot de Passe"><br><br>
-        <input type="submit" name="" value="Inscription" placeholder=""><br><br>
+        <input type="submit" class="btn-submit" name="" value="Inscription" placeholder=""><br><br>
         <a href="connexion.php">J'ai un compte - Connexion</a>
       </form>
     </div>

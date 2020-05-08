@@ -67,3 +67,7 @@ a:hover{
   transition: 0.8s;
   font-size: 20px;
 }
+
+.formulaire .btn-submit {
+  background: #e67e22;
+}
