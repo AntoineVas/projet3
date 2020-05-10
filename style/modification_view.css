@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #34495e;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.text {
+  text-align: center;
+  margin-top: 15%;
+  color: white;
+  letter-spacing: 8px;
+  font-size: 75px;
+  font-weight: bold;
+}
+
+.formulaire .btn-submit {
+  background: #e67e22;
+}
+
+.formulaire {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.formulaire input {
+  text-align: center;
+  padding: 15px;
+  width: 25%;
+  border-radius: 15px;
+  border: none;
+}
+
+.back {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.back .btn-custom {
+  background: #e67e22;
+}

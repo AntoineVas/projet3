@@ -36,18 +36,18 @@ session_start();
       <h1>Gestion de Profil</h1>
       <h3>Votre Nom <?php echo $_SESSION['nom']; ?> (Non modifiable)</h3>
       <h3>Votre Prenom <?php  echo $_SESSION['prenom']; ?> (Non modifiable)</h3>
-      <h3>Votre Mail <?php  echo $_SESSION['mail']; ?><a href="modif_mail.php">     <button type="button" class="btn btn-custom">Modification</button></a></h3>
-      <h3>Votre MDP (Cryptée)<?php  echo $_SESSION['mdp']; ?><a href="modif_mdp.php">     <button type="button" class="btn btn-custom">Modication</button></a></h3>
+      <h3>Votre e-Mail <?php  echo $_SESSION['mail']; ?><a href="modification_mail.php">     <button type="button" class="btn btn-custom">Modification</button></a></h3>
+      <h3>Votre MDP (Cryptée)<?php  echo $_SESSION['mdp']; ?><a href="modification_mdp.php">     <button type="button" class="btn btn-custom">Modication</button></a></h3>
 
       <h1>Mes Réservations</h1>
       <h3><?php
                 $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
-                $req = $bdd->prepare('SELECT * FROM reservation WHERE id=:id');
+                $req = $bdd->prepare('SELECT * FROM reservation WHERE id_client=:id');
                 $req->execute(array(
                     'id'=>$_SESSION['id']
                 ));
                 $donne=$req->fetch();
-                if($donne['id'] == $_SESSION['id']){
+                if($donne['id_client'] == $_SESSION['id']){
                     echo 'Vous avez une réservation en cour !';
                     $sea = $bdd->query('SELECT films, date from reservation WHERE id_client ='.$_SESSION['id'].'');
                     while($donnees = $sea->fetch()) {

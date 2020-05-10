@@ -44,6 +44,7 @@ Class Inscription{
         $mailexist = $reqmail->rowCount();
         if($mailexist == 0){
             $this->mail = $mail;
+            header('location: ../view/confirmation_inscription.php');
         }else{
             header('location: ../error/mdp_user.php');
         }
