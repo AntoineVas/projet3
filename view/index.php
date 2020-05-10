@@ -20,7 +20,7 @@
           <h1>C1né0</h1>
         </div>
         <div class="navigation">
-          <a class="active" href="#">Accueil</a>
+          <a class="active" href="index.php">Accueil</a>
           <a href="films.php">Films</a>
           <a href="reservation.php">Réservation</a>
           <a href="connexion.php">Connexion</a>

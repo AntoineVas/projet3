@@ -38,6 +38,20 @@ Class Manager {
         header('location: ../view/login/index.php');
     }
 
+    public function reservation($res){
+      $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
+      $req = $bdd->prepare('INSERT INTO reservation(id_client, nom_client, prenom_client, mail_client, films, date) VALUES(:id_client, :nom_client, :prenom_client, :mail_client, :films, :date)');
+      $req->execute(array(
+        'id_client'=>$res->getId(),
+        'nom_client'=>$res->getNom(),
+        'prenom_client'=>$res->getPrenom(),
+        'mail_client'=>$res->getMail(),
+        'films'=>$res->getFilms(),
+        'date'=>$res->getDate()
+      ));
+      header('location: ../view/login/confirmation.php');
+    }
+
 
     public function modification_nom($nch){
         $bdd = new PDO('mysql:host=localhost; dbname=project; charset=utf8', 'root','');
