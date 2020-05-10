@@ -35,7 +35,7 @@ Class Manager {
         $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
         $req = $bdd->prepare('INSERT INTO user(nom, prenom, mail, mdp) VALUES(:nom, :prenom, :mail, :mdp)');
         $req->execute(array('nom'=>$ins->getNom(), 'prenom'=>$ins->getPrenom(), 'mail'=>$ins->getMail(), 'mdp'=>$ins->getMdp()));
-        header('location: ../view/login/index.php');
+        header('location: ../view/confirmation_inscription.php');
     }
 
     public function reservation($res){

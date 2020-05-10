@@ -1,55 +1,23 @@
 body{
     margin: 0;
     padding: 0;
-    background:linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(../img/index-bg.jpg) no-repeat;
-    background-size: 25px 25px,cover;
+    background: #34495e;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a:hover{
     text-decoration: none;
 }
 
-.header .container-fluid .titre {
-  text-align: center;
-  font-family: 'Bangers', cursive;
-  color: #e74c3c;
-}
-
-.header .container-fluid .titre h1 {
-  font-size: 115px;
-  letter-spacing: 20px;
-}
-
-.header .container-fluid .navigation {
-  text-align: center;
-  font-family: 'Bangers', cursive;
-}
-
-.header .container-fluid .navigation a {
-  color: white;
-  padding: 25px;
-  font-size: 55px;
-}
-
-.header .container-fluid .navigation a.active {
-  color: #e74c3c;
-  padding: 25px;
-  font-size: 55px;
-}
-
-.header .container-fluid .navigation a:hover {
-  color: #e74c3c;
-  transition: 0.8s;
-}
-
 .films h1 {
     text-align: center;
     color: white;
-    margin-top: 25px;
-    font-family: 'Bangers', cursive;
-    letter-spacing: 12px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    letter-spacing: 8px;
     font-size: 75px;
+    font-weight: bold;
 }
 
 .films .row .col-sm-3 .card {
@@ -63,11 +31,10 @@ a:hover{
 
 .films .row .col-sm-3 .card h3,h4 {
   color: white;
-  font-family: 'Bangers', cursive;
 }
 
 .films .row .col-sm-3 .card h3 {
-  color: #f1c40f;
+  color: #e67e22;
 }
 
 .films .row .col-sm-3 .card img {

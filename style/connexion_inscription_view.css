@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #34495e;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.compte h1 {
+    text-align: center;
+    color: white;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    letter-spacing: 8px;
+    font-size: 75px;
+    font-weight: bold;
+}
+
+.compte .card {
+  background: transparent;
+  border: none;
+}
+
+.compte .card-header {
+  text-align: center;
+  color: #e74c3c;
+  font-size: 30px;
+  border: none;
+  background: #34495e;
+}
+
+.formulaire {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.formulaire input {
+  text-align: center;
+  padding: 15px;
+  width: 25%;
+  border-radius: 15px;
+  border: none;
+}
+
+.formulaire a {
+  color: white;
+  font-family: 'Bangers', cursive;
+  font-size: 25px;
+}
+
+.formulaire a:hover {
+  color: #e74c3c;
+  transition: 0.8s;
+  font-size: 20px;
+}
+
+.formulaire .btn-submit {
+  background: #e67e22;
+}

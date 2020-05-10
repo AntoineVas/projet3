@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>C1né0-Films</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -14,20 +14,18 @@
   </head>
   <body>
 
-    <header class="container-fluid header">
-      <div class="container-fluid">
-        <div class="titre">
-          <h1>C1né0</h1>
-        </div>
-        <div class="navigation">
-          <a href="index.php">Accueil</a>
-          <a class="active" href="#">Films</a>
-          <a href="reservation.php">Réservation</a>
-          <a href="connexion.php">Connexion</a>
-          <a href="inscription.php">Inscription</a>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+      <a class="navbar-brand" href="index.php">C1né0</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="index.php">Accueil<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active" href="films.php">Nos Films</a>
+          <a class="nav-item nav-link" href="connexion_inscription.php">Connexion / Inscription</a>
       </div>
-    </header>
+    </nav>
 
     <section class="films">
       <h1>NOS FILMS</h1>
@@ -36,7 +34,7 @@
           <div class="col-sm-6">
             <div class="card">
               <div class="card-header">
-                FILMS
+                NOS FILMS
               </div>
               <div class="card-body">
                 <p class="card-text">
@@ -54,7 +52,7 @@
           <div class="col-sm-6">
             <div class="card">
               <div class="card-header">
-                CATEGORIES
+                NOS CATEGORIES
               </div>
               <div class="card-body">
                 <p class="card-text">
@@ -62,43 +60,43 @@
                     <?php
                       $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
                       foreach($bdd->query('SELECT COUNT(*) FROM films WHERE categorie = "Comédie"') as $row) {
-                      echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : Comédie </br>" ;
+                      echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : <span>Comédie</span> </br>" ;
                     }
                      ?>
                      <?php
                        $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
                        foreach($bdd->query('SELECT COUNT(*) FROM films WHERE categorie = "Drame"') as $row) {
-                       echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : Drame </br>" ;
+                       echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : <span>Drame</span> </br>" ;
                      }
                       ?>
                       <?php
                         $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
                         foreach($bdd->query('SELECT COUNT(*) FROM films WHERE categorie = "Western"') as $row) {
-                        echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : Western </br>" ;
+                        echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : <span>Western</span> </br>" ;
                       }
                        ?>
                        <?php
                          $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
                          foreach($bdd->query('SELECT COUNT(*) FROM films WHERE categorie = "Policier"') as $row) {
-                         echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : Policier </br>" ;
+                         echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : <span>Policier</span> </br>" ;
                        }
                         ?>
                         <?php
                           $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
                           foreach($bdd->query('SELECT COUNT(*) FROM films WHERE categorie = "Fantastique"') as $row) {
-                          echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : Fantastique </br>" ;
+                          echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : <span>Fantastique</span> </br>" ;
                         }
                          ?>
                          <?php
                            $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
                            foreach($bdd->query('SELECT COUNT(*) FROM films WHERE categorie = "Horreur"') as $row) {
-                           echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : Horreur </br>" ;
+                           echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : <span>Horreur</span> </br>" ;
                          }
                           ?>
                           <?php
                             $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
                             foreach($bdd->query('SELECT COUNT(*) FROM films WHERE categorie = "Catastrophe"') as $row) {
-                            echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : Catastrophe" ;
+                            echo "Nous avons "."<span>".$row['COUNT(*)']."</span>"." film(s) dans la catégorie : <span>Catastrophe</span>" ;
                           }
                            ?>
                   </div>
