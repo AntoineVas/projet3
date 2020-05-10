@@ -24,7 +24,7 @@ Class Inscription{
         if($nomlength < 75){
             $this->nom = $nom;
         }else{
-            echo 'Caractère maximum du nom = 5';
+            header('location: ../error/mdp_user.php');
         }
     }
 
@@ -33,7 +33,7 @@ Class Inscription{
         if($prenomlength < 75){
             $this->prenom = $prenom;
         }else{
-            echo 'Caractère maximum du prénom = 5';
+            echo 'Caractère maximum du prénom = 75';
         }
     }
 

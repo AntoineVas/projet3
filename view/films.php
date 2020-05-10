@@ -40,9 +40,9 @@
                 <p class="card-text">
                   <?php
                     $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
-                    $req = $bdd->query('SELECT nom from films');
+                    $req = $bdd->query('SELECT nom, categorie from films');
                     while($donnees = $req->fetch()) {
-                      echo $donnees['nom']." "."<br/>";
+                      echo $donnees['nom']." "."(".$donnees['categorie'].")"."<br/>";
                     }
                    ?>
                 </p>

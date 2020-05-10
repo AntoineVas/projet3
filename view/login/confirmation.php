@@ -13,10 +13,11 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/e1924a5c8f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../../style/confirmation_view.css">
   </head>
   <body>
 
+  <div class="text">
     <h1>Vous venez de réserver le film : <?php
       $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
       $search = $_SESSION['id'];
@@ -42,9 +43,8 @@ session_start();
       }
      ?></h1>
 
-
-
-
+     <a href="index.php"><button type="button" class="btn btn-custom">Retour à l'accueil</button></a>
+  </div>
 
   </body>
 </html>

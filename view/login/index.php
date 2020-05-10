@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>C1né0</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -14,23 +14,27 @@
   </head>
   <body>
 
-    <header class="container-fluid header">
-      <div class="container-fluid">
-        <div class="titre">
-          <h1>C1né0</h1>
-        </div>
-        <div class="navigation">
-          <a class="active" href="index.php">Accueil</a>
-          <a href="films.php">Films</a>
-          <a href="reservation.php">Réservation</a>
-          <a href="profil.php">Mon Profil</a>
-          <a href="deconnexion.php">Deconnexion</a>
-        </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+      <a class="navbar-brand" href="index.php">C1né0</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="index.php">Accueil<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="films.php">Nos Films</a>
+          <a class="nav-item nav-link" href="reservation.php">Réservation</a>
+          <a class="nav-item nav-link" href="profil.php">Mon Profil</a>
+          <a class="nav-item nav-link" href="../deconnexion.php">Déconnexion</a>
       </div>
-    </header>
+    </nav>
+
+
+
 
       <section class="films">
-        <h1>A LA UNE !</h1>
+        <h1>FILMS TENDANCES</h1>
         <div class="row">
           <div class="col-sm-3">
             <div class="card">
