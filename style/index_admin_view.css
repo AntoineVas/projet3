@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #34495e;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.tendances h3 {
+  color: white;
+}
+
+.tendances {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.tendances input {
+  text-align: center;
+  padding: 15px;
+  width: 25%;
+  border-radius: 15px;
+  border: none;
+}
+
+.tendances select {
+  text-align: center;
+  padding: 15px;
+  width: 25%;
+  border-radius: 15px;
+  border: none;
+}
+
+.tendances .btn-submit {
+  background: #e67e22;
+}
+
+.show {
+  text-align: center;
+  color: white;
+}
+
+.show h3 {
+  color: #e67e22;
+}

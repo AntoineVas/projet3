@@ -76,5 +76,32 @@ Class Manager {
         ));
     }
 
+    public function add_films($add){
+      $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
+      $req = $bdd->prepare('INSERT INTO films(nom, auteur, categorie, img, note) VALUES(:nom, :auteur, :categorie, :img, :note)');
+      $req->execute(array('nom'=>$add->getNom(), 'auteur'=>$add->getAuteur(), 'categorie'=>$add->getCategorie(), 'img'=>$add->getImg(), 'note'=>$add->getNote()));
+      header('location: ../view/admin/films.php');
+    }
+
+    public function delete_films($del){
+      $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
+      $req = $bdd->prepare('DELETE FROM films WHERE films.id = :id;');
+      $req->execute(array('id'=>$del->getId()));
+      header('location: ../view/admin/films.php');
+    }
+
+    public function modification_tendances($mod){
+      $bdd = new PDO('mysql:host=localhost:3308;dbname=cinema;charset=utf8','root','');
+      $req = $bdd->prepare('UPDATE show_films SET nom=:nom, auteur=:auteur, img=:img, note=:note WHERE id=:id');
+      $req->execute(array(
+          'id'=>$mod->getId(),
+          'nom'=>$mod->getNom(),
+          'auteur'=>$mod->getAuteur(),
+          'img'=>$mod->getImg(),
+          'note'=>$mod->getNote(),
+      ));
+      header('location: ../view/admin/index.php');
+    }
+
 }
  ?>

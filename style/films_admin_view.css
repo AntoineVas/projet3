@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #34495e;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.card {
+  text-align: center;
+  border: none;
+  background: transparent;
+}
+
+.card-body {
+  overflow-y: auto;
+  font-size: 25px;
+  height: 350px;
+  border: none;
+}
+
+.card-body span {
+  color: #e67e22;
+}
+
+.card-header {
+  color: #e74c3c;
+  font-size: 30px;
+  border: none;
+  background: #34495e;
+}
+
+.add h3 {
+  color: #e74c3c;
+}
+
+.add .btn-submit {
+  background: #e67e22;
+}
+
+.add {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.add input {
+  text-align: center;
+  padding: 15px;
+  width: 25%;
+  border-radius: 15px;
+  border: none;
+}
+
+.delete h3 {
+  color: #e74c3c;
+}
+
+.delete .btn-submit {
+  background: #e67e22;
+}
+
+.delete {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.delete input {
+  text-align: center;
+  padding: 15px;
+  width: 25%;
+  border-radius: 15px;
+  border: none;
+}
