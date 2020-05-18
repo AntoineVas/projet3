@@ -26,8 +26,8 @@ session_start();
         <div class="navbar-nav">
           <a class="nav-item nav-link active" href="index.php">MODIFICATION TENDANCES<span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="films.php">MODIFICATION NOS FILMS</a>
-          <a class="nav-item nav-link" href="">RESERVATION</a>
-          <a class="nav-item nav-link" href="">USER</a>
+          <a class="nav-item nav-link" href="reservation.php">RESERVATION</a>
+          <a class="nav-item nav-link" href="user.php">USER</a>
           <a class="nav-item nav-link" href="../deconnexion.php">DECONNEXION</a>
       </div>
     </nav>
